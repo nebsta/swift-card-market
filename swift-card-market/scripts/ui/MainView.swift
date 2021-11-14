@@ -10,23 +10,10 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         NavigationView {
-            VStack(alignment: .center, spacing: 10) {
-            
-                Text("Card Market")
-                    .font(.system(size: 50))
+            List {
                 
-                Text("You like cards eh?")
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: 12))
-                
-                Button("Login", action: login)
-                    .buttonStyle(.bordered)
             }
-        }
-    }
-    
-    func login() -> Void {
-        print("Test")
+        }.navigationBarHidden(true)
     }
 }
 
