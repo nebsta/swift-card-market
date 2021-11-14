@@ -9,11 +9,23 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        NavigationView {
-            List {
-                
-            }
-        }.navigationBarHidden(true)
+        TabView {
+            MarketplaceView()
+                .tabItem {
+                    Label("Marketplace", systemImage: "list.dash")
+                }
+            
+            MyCollectionView()
+                .tabItem {
+                    Label("My Collection", systemImage: "list.dash")
+                }
+            
+            MyProfileView()
+                .tabItem {
+                    Label("My Profile", systemImage: "list.dash")
+                }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

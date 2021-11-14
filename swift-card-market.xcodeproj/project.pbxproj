@@ -12,6 +12,13 @@
 		431B63BF274136EE009E2F81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B63BE274136EE009E2F81 /* Preview Assets.xcassets */; };
 		438D01A627413C2C00069345 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01A527413C2C00069345 /* TitleView.swift */; };
 		438D01A92741424500069345 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01A82741424500069345 /* MainView.swift */; };
+		438D01AB274146ED00069345 /* MarketplaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01AA274146ED00069345 /* MarketplaceView.swift */; };
+		438D01AD274146F700069345 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01AC274146F700069345 /* MyCollectionView.swift */; };
+		438D01AF27414A5700069345 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01AE27414A5700069345 /* MyProfileView.swift */; };
+		438D01B127414B2600069345 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01B027414B2600069345 /* NetworkProtocol.swift */; };
+		438D01B427414B8A00069345 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01B327414B8A00069345 /* Card.swift */; };
+		438D01B627414C8800069345 /* DummyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01B527414C8800069345 /* DummyNetwork.swift */; };
+		438D01B827414E0300069345 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01B727414E0300069345 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,13 @@
 		431B63BE274136EE009E2F81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		438D01A527413C2C00069345 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		438D01A82741424500069345 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		438D01AA274146ED00069345 /* MarketplaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceView.swift; sourceTree = "<group>"; };
+		438D01AC274146F700069345 /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
+		438D01AE27414A5700069345 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		438D01B027414B2600069345 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		438D01B327414B8A00069345 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		438D01B527414C8800069345 /* DummyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyNetwork.swift; sourceTree = "<group>"; };
+		438D01B727414E0300069345 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,7 @@
 		438D019C2741384D00069345 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				438D01B227414B7D00069345 /* model */,
 				438D01A727413F7700069345 /* network */,
 				438D019F274138D100069345 /* ui */,
 				431B63B7274136ED009E2F81 /* MainApp.swift */,
@@ -83,6 +98,9 @@
 			children = (
 				438D01A527413C2C00069345 /* TitleView.swift */,
 				438D01A82741424500069345 /* MainView.swift */,
+				438D01AA274146ED00069345 /* MarketplaceView.swift */,
+				438D01AC274146F700069345 /* MyCollectionView.swift */,
+				438D01AE27414A5700069345 /* MyProfileView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -90,8 +108,19 @@
 		438D01A727413F7700069345 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				438D01B027414B2600069345 /* NetworkProtocol.swift */,
+				438D01B527414C8800069345 /* DummyNetwork.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		438D01B227414B7D00069345 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				438D01B327414B8A00069345 /* Card.swift */,
+				438D01B727414E0300069345 /* User.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438D01AB274146ED00069345 /* MarketplaceView.swift in Sources */,
 				431B63B8274136ED009E2F81 /* MainApp.swift in Sources */,
 				438D01A92741424500069345 /* MainView.swift in Sources */,
 				438D01A627413C2C00069345 /* TitleView.swift in Sources */,
+				438D01AF27414A5700069345 /* MyProfileView.swift in Sources */,
+				438D01B127414B2600069345 /* NetworkProtocol.swift in Sources */,
+				438D01B627414C8800069345 /* DummyNetwork.swift in Sources */,
+				438D01AD274146F700069345 /* MyCollectionView.swift in Sources */,
+				438D01B827414E0300069345 /* User.swift in Sources */,
+				438D01B427414B8A00069345 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
