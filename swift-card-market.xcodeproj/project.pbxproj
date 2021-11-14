@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		431B63B8274136ED009E2F81 /* swift_card_marketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B63B7274136ED009E2F81 /* swift_card_marketApp.swift */; };
-		431B63BA274136ED009E2F81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B63B9274136ED009E2F81 /* ContentView.swift */; };
+		431B63B8274136ED009E2F81 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B63B7274136ED009E2F81 /* MainApp.swift */; };
 		431B63BC274136EE009E2F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B63BB274136EE009E2F81 /* Assets.xcassets */; };
 		431B63BF274136EE009E2F81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B63BE274136EE009E2F81 /* Preview Assets.xcassets */; };
+		438D01A627413C2C00069345 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01A527413C2C00069345 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		431B63B4274136ED009E2F81 /* swift-card-market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-card-market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		431B63B7274136ED009E2F81 /* swift_card_marketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_card_marketApp.swift; sourceTree = "<group>"; };
-		431B63B9274136ED009E2F81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		431B63B7274136ED009E2F81 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		431B63BB274136EE009E2F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431B63BE274136EE009E2F81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		438D01A527413C2C00069345 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,7 @@
 		431B63B6274136ED009E2F81 /* swift-card-market */ = {
 			isa = PBXGroup;
 			children = (
-				431B63B7274136ED009E2F81 /* swift_card_marketApp.swift */,
-				431B63B9274136ED009E2F81 /* ContentView.swift */,
+				438D019C2741384D00069345 /* scripts */,
 				431B63BB274136EE009E2F81 /* Assets.xcassets */,
 				431B63BD274136EE009E2F81 /* Preview Content */,
 			);
@@ -65,6 +64,31 @@
 				431B63BE274136EE009E2F81 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		438D019C2741384D00069345 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				438D01A727413F7700069345 /* network */,
+				438D019F274138D100069345 /* ui */,
+				431B63B7274136ED009E2F81 /* MainApp.swift */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		438D019F274138D100069345 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				438D01A527413C2C00069345 /* MainView.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		438D01A727413F7700069345 /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431B63BA274136ED009E2F81 /* ContentView.swift in Sources */,
-				431B63B8274136ED009E2F81 /* swift_card_marketApp.swift in Sources */,
+				431B63B8274136ED009E2F81 /* MainApp.swift in Sources */,
+				438D01A627413C2C00069345 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
