@@ -25,6 +25,10 @@ class UserManager : UserManagerProtocol {
     
     public func signup(_ form: UserForm) async throws -> Void {
         
+        guard form.email.isValidEmail() else {
+            throw SignupError.InvalidEmail
+        }
+        
         guard UserManager.UsernameRange.contains(form.username.count) else {
             throw SignupError.UsernameLength
         }
@@ -58,6 +62,7 @@ enum SignupError : Error {
     case UsernameLength
     case PasswordLength
     case MismatchPassword
+    case InvalidEmail
     case UserExists
 }
 

@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct SignupView: View {
+    
+    enum Field : Hashable {
+        case Email
+        case Username
+        case Password
+        case PasswordConfirm
+    }
+    
     let userManager:UserManagerProtocol?
 
-    @State var email:String = ""
-    @State var username:String = ""
-    @State var password:String = ""
-    @State var passwordConfirm:String = ""
-    @State var signupInProgress:Bool = false
+    // user signup form states
+    @State private var email:String = ""
+    @State private var username:String = ""
+    @State private var password:String = ""
+    @State private var passwordConfirm:String = ""
+    @State private var signupInProgress:Bool = false
+    @FocusState private var focusedField: Field?
     
+    // error states
     @State var showingError:Bool = false
     @State var errorMessage:String = ""
     
@@ -35,23 +46,37 @@ struct SignupView: View {
                     TextField("Email", text: $email)
                         .keyboardType(.emailAddress)
                         .disableAutocorrection(true)
+                        .textInputAutocapitalization(.never)
+                        .focused($focusedField, equals: .Email)
+                        .onSubmit { focusedField = .Username }
                     TextField("Username", text: $username)
                         .disableAutocorrection(true)
                         .textInputAutocapitalization(.never)
+                        .focused($focusedField, equals: .Username)
+                        .onSubmit { focusedField = .Password }
                     SecureField("Password", text: $password)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
+                        .focused($focusedField, equals: .Password)
+                        .textContentType(.newPassword)
+                        .textInputAutocapitalization(.never)
+                        .onSubmit { focusedField = .PasswordConfirm }
                     SecureField("Password (Confirm)", text: $passwordConfirm)
                         .disableAutocorrection(true)
+                        .autocapitalization(.none)
+                        .focused($focusedField, equals: .PasswordConfirm)
+                        .textContentType(.newPassword)
                         .textInputAutocapitalization(.never)
                     
                     Button("Signup") {
                         Task {
+                            
+                            // show/hide the loading overlay during signup
                             signupInProgress = true
                             defer { signupInProgress = false }
                             
+                            // attempt signup and check for errors
                             let form:UserForm = UserForm(email, password, passwordConfirm, username)
-                            
                             var errorMessage:String? = nil
                             do
                             {
@@ -73,8 +98,12 @@ struct SignupView: View {
                             {
                                 errorMessage = "Both the password provided do not match"
                             }
+                            catch SignupError.InvalidEmail
+                            {
+                                errorMessage = "The email provide is not in a valid format"
+                            }
                             
-                            // show the error
+                            // show the error if there was one
                             if let message:String = errorMessage {
                                 self.showingError = true
                                 self.errorMessage = message

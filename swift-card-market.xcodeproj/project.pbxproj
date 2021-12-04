@@ -25,6 +25,7 @@
 		438D01C52741636D00069345 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C42741636D00069345 /* SignupView.swift */; };
 		438D01C92741722000069345 /* UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C82741722000069345 /* UserForm.swift */; };
 		43BEA556275B732B00445F01 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BEA555275B732B00445F01 /* LoadingView.swift */; };
+		43BEA559275B94E000445F01 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BEA558275B94E000445F01 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		438D01C42741636D00069345 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		438D01C82741722000069345 /* UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForm.swift; sourceTree = "<group>"; };
 		43BEA555275B732B00445F01 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		43BEA558275B94E000445F01 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		438D019C2741384D00069345 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				43BEA557275B94D500445F01 /* extensions */,
 				438D01B9274157BC00069345 /* user */,
 				438D01B227414B7D00069345 /* model */,
 				438D01A727413F7700069345 /* network */,
@@ -155,6 +158,14 @@
 				43BEA555275B732B00445F01 /* LoadingView.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		43BEA557275B94D500445F01 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43BEA558275B94E000445F01 /* StringExtensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				438D01B827414E0300069345 /* User.swift in Sources */,
 				438D01BB274157C600069345 /* UserManager.swift in Sources */,
 				438D01B427414B8A00069345 /* Card.swift in Sources */,
+				43BEA559275B94E000445F01 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swift-card-market/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4P3G8H5TQ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
