@@ -8,9 +8,16 @@
 import Foundation
 
 protocol NetworkProtocol {
-    func fetchMarketplace() async -> [Card]
-    func purchaseCard(_ id:String) async -> Void
+    func fetchMarketplace() async throws -> [Card]
+    func purchaseCard(_ id:String) async throws -> Void
     
-    func login(_ username:String, _ password:String) async -> Void
+    func login(_ username:String, _ password:String) async throws -> User
+    func signup(_ form:UserForm) async throws -> User
     func logout() -> Void
+}
+
+enum NetworkError : Error {
+    case Timeout
+    case Offline
+    case Unauthorised
 }

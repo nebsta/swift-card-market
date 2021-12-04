@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct MainApp: App {
+    
+    let network:NetworkProtocol
+    let userManager:UserManagerProtocol
+    
     var body: some Scene {
         WindowGroup {
-            TitleView()
+            TitleView(self.userManager)
         }
+    }
+    
+    init() {
+        self.network = DummyNetwork()
+        self.userManager = UserManager(self.network)
     }
 }

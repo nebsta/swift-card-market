@@ -8,7 +8,8 @@
 import Foundation
 
 struct User {
-    var id:String;
-    var email:String;
-    var username:String;
+    public let id:String;
+    public let email:String;
+    public let username:String;
+    public let profileUrl:String;
 }

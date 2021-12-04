@@ -8,8 +8,9 @@
 import Foundation
 
 struct Card {
-    var id:String
-    var title:String
-    var descriptin:String
-    var imageUrl:String
+    public let id:String
+    public let title:String
+    public let descriptin:String
+    public let imageUrl:String
+    public let value:Double
 }

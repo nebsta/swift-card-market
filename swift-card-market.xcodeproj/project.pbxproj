@@ -19,6 +19,11 @@
 		438D01B427414B8A00069345 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01B327414B8A00069345 /* Card.swift */; };
 		438D01B627414C8800069345 /* DummyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01B527414C8800069345 /* DummyNetwork.swift */; };
 		438D01B827414E0300069345 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01B727414E0300069345 /* User.swift */; };
+		438D01BB274157C600069345 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01BA274157C600069345 /* UserManager.swift */; };
+		438D01BD274157D800069345 /* UserManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01BC274157D800069345 /* UserManagerProtocol.swift */; };
+		438D01C32741636300069345 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C22741636300069345 /* LoginView.swift */; };
+		438D01C52741636D00069345 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C42741636D00069345 /* SignupView.swift */; };
+		438D01C92741722000069345 /* UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C82741722000069345 /* UserForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		438D01B327414B8A00069345 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		438D01B527414C8800069345 /* DummyNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyNetwork.swift; sourceTree = "<group>"; };
 		438D01B727414E0300069345 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		438D01BA274157C600069345 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		438D01BC274157D800069345 /* UserManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerProtocol.swift; sourceTree = "<group>"; };
+		438D01C22741636300069345 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		438D01C42741636D00069345 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		438D01C82741722000069345 /* UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 		438D019C2741384D00069345 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				438D01B9274157BC00069345 /* user */,
 				438D01B227414B7D00069345 /* model */,
 				438D01A727413F7700069345 /* network */,
 				438D019F274138D100069345 /* ui */,
@@ -101,6 +112,8 @@
 				438D01AA274146ED00069345 /* MarketplaceView.swift */,
 				438D01AC274146F700069345 /* MyCollectionView.swift */,
 				438D01AE27414A5700069345 /* MyProfileView.swift */,
+				438D01C22741636300069345 /* LoginView.swift */,
+				438D01C42741636D00069345 /* SignupView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -119,8 +132,18 @@
 			children = (
 				438D01B327414B8A00069345 /* Card.swift */,
 				438D01B727414E0300069345 /* User.swift */,
+				438D01C82741722000069345 /* UserForm.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		438D01B9274157BC00069345 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				438D01BA274157C600069345 /* UserManager.swift */,
+				438D01BC274157D800069345 /* UserManagerProtocol.swift */,
+			);
+			path = user;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +220,16 @@
 				431B63B8274136ED009E2F81 /* MainApp.swift in Sources */,
 				438D01A92741424500069345 /* MainView.swift in Sources */,
 				438D01A627413C2C00069345 /* TitleView.swift in Sources */,
+				438D01BD274157D800069345 /* UserManagerProtocol.swift in Sources */,
 				438D01AF27414A5700069345 /* MyProfileView.swift in Sources */,
 				438D01B127414B2600069345 /* NetworkProtocol.swift in Sources */,
+				438D01C32741636300069345 /* LoginView.swift in Sources */,
+				438D01C52741636D00069345 /* SignupView.swift in Sources */,
 				438D01B627414C8800069345 /* DummyNetwork.swift in Sources */,
 				438D01AD274146F700069345 /* MyCollectionView.swift in Sources */,
+				438D01C92741722000069345 /* UserForm.swift in Sources */,
 				438D01B827414E0300069345 /* User.swift in Sources */,
+				438D01BB274157C600069345 /* UserManager.swift in Sources */,
 				438D01B427414B8A00069345 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,9 +358,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swift-card-market/Preview Content\"";
+				DEVELOPMENT_TEAM = 4P3G8H5TQ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -347,6 +377,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nebsta.swift-card-market";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,9 +389,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swift-card-market/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -375,6 +408,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nebsta.swift-card-market";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
