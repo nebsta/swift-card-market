@@ -24,6 +24,7 @@
 		438D01C32741636300069345 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C22741636300069345 /* LoginView.swift */; };
 		438D01C52741636D00069345 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C42741636D00069345 /* SignupView.swift */; };
 		438D01C92741722000069345 /* UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C82741722000069345 /* UserForm.swift */; };
+		43BEA556275B732B00445F01 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BEA555275B732B00445F01 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		438D01C22741636300069345 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		438D01C42741636D00069345 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		438D01C82741722000069345 /* UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForm.swift; sourceTree = "<group>"; };
+		43BEA555275B732B00445F01 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		438D019F274138D100069345 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				43BEA554275B731B00445F01 /* common */,
 				438D01A527413C2C00069345 /* TitleView.swift */,
 				438D01A82741424500069345 /* MainView.swift */,
 				438D01AA274146ED00069345 /* MarketplaceView.swift */,
@@ -144,6 +147,14 @@
 				438D01BC274157D800069345 /* UserManagerProtocol.swift */,
 			);
 			path = user;
+			sourceTree = "<group>";
+		};
+		43BEA554275B731B00445F01 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				43BEA555275B732B00445F01 /* LoadingView.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 				438D01A92741424500069345 /* MainView.swift in Sources */,
 				438D01A627413C2C00069345 /* TitleView.swift in Sources */,
 				438D01BD274157D800069345 /* UserManagerProtocol.swift in Sources */,
+				43BEA556275B732B00445F01 /* LoadingView.swift in Sources */,
 				438D01AF27414A5700069345 /* MyProfileView.swift in Sources */,
 				438D01B127414B2600069345 /* NetworkProtocol.swift in Sources */,
 				438D01C32741636300069345 /* LoginView.swift in Sources */,

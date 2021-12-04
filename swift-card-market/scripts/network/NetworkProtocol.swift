@@ -20,4 +20,5 @@ enum NetworkError : Error {
     case Timeout
     case Offline
     case Unauthorised
+    case BadRequest
 }
