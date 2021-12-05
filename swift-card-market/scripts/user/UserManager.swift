@@ -18,12 +18,17 @@ class UserManager : UserManagerProtocol {
         self.network = network
     }
     
-    public func login(_ username: String, password: String) async throws {
-        let user = try await network.login(username,password)
-        self.currentUser = user
+    public func login(_ form:LoginForm) async throws {
+        
+        guard UserManager.UsernameRange.contains(form.username.count) &&
+              UserManager.PasswordRange.contains(form.password.count) else {
+            throw LoginError.InvalidCredentials
+        }
+        
+        self.currentUser = try await network.login(form)
     }
     
-    public func signup(_ form: UserForm) async throws -> Void {
+    public func signup(_ form: SignupForm) async throws -> Void {
         
         guard form.email.isValidEmail() else {
             throw SignupError.InvalidEmail
@@ -41,16 +46,7 @@ class UserManager : UserManagerProtocol {
             throw SignupError.MismatchPassword
         }
         
-        do {
-            let user = try await network.signup(form)
-            self.currentUser = user
-        }
-        catch NetworkError.Offline {
-            
-        }
-        catch NetworkError.BadRequest {
-            
-        }
+        self.currentUser = try await network.signup(form)
     }
     
     public func logout() {

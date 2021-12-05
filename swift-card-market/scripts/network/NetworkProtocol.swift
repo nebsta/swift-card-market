@@ -11,8 +11,8 @@ protocol NetworkProtocol {
     func fetchMarketplace() async throws -> [Card]
     func purchaseCard(_ id:String) async throws -> Void
     
-    func login(_ username:String, _ password:String) async throws -> User
-    func signup(_ form:UserForm) async throws -> User
+    func login(_ form:LoginForm) async throws -> User
+    func signup(_ form:SignupForm) async throws -> User
     func logout() -> Void
 }
 

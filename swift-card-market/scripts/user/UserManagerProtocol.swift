@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserManagerProtocol {
-    func login(_ username:String, password:String) async throws -> Void
-    func signup(_ form:UserForm) async throws -> Void
+    func login(_ form:LoginForm) async throws -> Void
+    func signup(_ form:SignupForm) async throws -> Void
     func logout() -> Void
 }

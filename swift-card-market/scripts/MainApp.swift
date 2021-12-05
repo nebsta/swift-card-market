@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct MainApp: App {
     
-    let network:NetworkProtocol
-    let userManager:UserManagerProtocol
+    private let network:NetworkProtocol
+    private let userManager:UserManagerProtocol
     
     var body: some Scene {
         WindowGroup {

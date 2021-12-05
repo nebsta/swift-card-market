@@ -10,6 +10,7 @@
 		431B63B8274136ED009E2F81 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B63B7274136ED009E2F81 /* MainApp.swift */; };
 		431B63BC274136EE009E2F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B63BB274136EE009E2F81 /* Assets.xcassets */; };
 		431B63BF274136EE009E2F81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B63BE274136EE009E2F81 /* Preview Assets.xcassets */; };
+		4385D44F275CEED5004E95B7 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385D44E275CEED5004E95B7 /* LoginForm.swift */; };
 		438D01A627413C2C00069345 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01A527413C2C00069345 /* TitleView.swift */; };
 		438D01A92741424500069345 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01A82741424500069345 /* MainView.swift */; };
 		438D01AB274146ED00069345 /* MarketplaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01AA274146ED00069345 /* MarketplaceView.swift */; };
@@ -23,7 +24,7 @@
 		438D01BD274157D800069345 /* UserManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01BC274157D800069345 /* UserManagerProtocol.swift */; };
 		438D01C32741636300069345 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C22741636300069345 /* LoginView.swift */; };
 		438D01C52741636D00069345 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C42741636D00069345 /* SignupView.swift */; };
-		438D01C92741722000069345 /* UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C82741722000069345 /* UserForm.swift */; };
+		438D01C92741722000069345 /* SignupForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D01C82741722000069345 /* SignupForm.swift */; };
 		43BEA556275B732B00445F01 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BEA555275B732B00445F01 /* LoadingView.swift */; };
 		43BEA559275B94E000445F01 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BEA558275B94E000445F01 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		431B63B7274136ED009E2F81 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		431B63BB274136EE009E2F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431B63BE274136EE009E2F81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4385D44E275CEED5004E95B7 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		438D01A527413C2C00069345 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		438D01A82741424500069345 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		438D01AA274146ED00069345 /* MarketplaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceView.swift; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		438D01BC274157D800069345 /* UserManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerProtocol.swift; sourceTree = "<group>"; };
 		438D01C22741636300069345 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		438D01C42741636D00069345 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
-		438D01C82741722000069345 /* UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForm.swift; sourceTree = "<group>"; };
+		438D01C82741722000069345 /* SignupForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupForm.swift; sourceTree = "<group>"; };
 		43BEA555275B732B00445F01 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		43BEA558275B94E000445F01 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +140,8 @@
 			children = (
 				438D01B327414B8A00069345 /* Card.swift */,
 				438D01B727414E0300069345 /* User.swift */,
-				438D01C82741722000069345 /* UserForm.swift */,
+				438D01C82741722000069345 /* SignupForm.swift */,
+				4385D44E275CEED5004E95B7 /* LoginForm.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -245,12 +248,13 @@
 				438D01BD274157D800069345 /* UserManagerProtocol.swift in Sources */,
 				43BEA556275B732B00445F01 /* LoadingView.swift in Sources */,
 				438D01AF27414A5700069345 /* MyProfileView.swift in Sources */,
+				4385D44F275CEED5004E95B7 /* LoginForm.swift in Sources */,
 				438D01B127414B2600069345 /* NetworkProtocol.swift in Sources */,
 				438D01C32741636300069345 /* LoginView.swift in Sources */,
 				438D01C52741636D00069345 /* SignupView.swift in Sources */,
 				438D01B627414C8800069345 /* DummyNetwork.swift in Sources */,
 				438D01AD274146F700069345 /* MyCollectionView.swift in Sources */,
-				438D01C92741722000069345 /* UserForm.swift in Sources */,
+				438D01C92741722000069345 /* SignupForm.swift in Sources */,
 				438D01B827414E0300069345 /* User.swift in Sources */,
 				438D01BB274157C600069345 /* UserManager.swift in Sources */,
 				438D01B427414B8A00069345 /* Card.swift in Sources */,

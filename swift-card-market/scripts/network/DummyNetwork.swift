@@ -24,7 +24,7 @@ class DummyNetwork : NetworkProtocol {
         await Task.sleep(loginDelaySeconds * 1_000_000_000)
     }
     
-    public func login(_ username: String, _ password: String) async throws -> User {
+    public func login(_ form:LoginForm) async throws -> User {
         await delay(loginDelaySeconds)
         
         if let loginError = loginError {
@@ -34,7 +34,7 @@ class DummyNetwork : NetworkProtocol {
         return User(id:"some_id", email:"ben.nat.wallis@gmail.com", username: "nebjezus", profileUrl: "https://scontent.faal1-1.fna.fbcdn.net/v/t1.6435-9/119175977_10223082383673232_2069570767405236772_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEBzLJ66IHjt1-Xi-_3N2oL5RG0yXPOZmblEbTJc85mZu-65BHKPaIH1Z6nA20U5aQ&_nc_ohc=bR1hDyjMMaoAX8V96uj&_nc_ht=scontent.faal1-1.fna&oh=62f751056206ed4f4758b365c5c815e4&oe=61B845EE")
     }
     
-    func signup(_ form: UserForm) async throws -> User {
+    func signup(_ form: SignupForm) async throws -> User {
         await delay(signupDelaySeconds)
         
         if let signupError = signupError {

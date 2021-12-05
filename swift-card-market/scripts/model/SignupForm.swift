@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserForm {
+struct SignupForm {
     public let email:String
     public let password:String
     public let passwordConfirm:String
